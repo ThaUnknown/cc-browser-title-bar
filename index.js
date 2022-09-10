@@ -16,9 +16,15 @@ export default {
       args[0].type = this.platform
       return args[0]
     })
+    this.styles = cumcord.patcher.injectCSS(`
+    .sidebar-1tnWFu {
+      border-radius: 8px 0 0;
+      overflow: hidden;
+    }`)
   },
   onUnload () {
     this.unpatch?.()
+    this.styles?.()
     this.manifest?.remove()
   },
   getPlatform () {
