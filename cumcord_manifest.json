@@ -1,0 +1,7 @@
+{
+  "name": "Browser Title Bar",
+  "description": "Enables the title bar on browser.",
+  "author": "ThaUnknown",
+  "file": "./index.js",
+  "license": "MIT"
+}
