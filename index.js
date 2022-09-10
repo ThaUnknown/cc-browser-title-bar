@@ -6,7 +6,7 @@ export default {
     console.log(this.platform)
     const titlebar = cumcord.modules.webpack.find(m => m?.default?.toString?.()?.includes('case m.PlatformTypes.WINDOWS'))
     console.log({ titlebar })
-    this.unpatch = cumcord.patcher.before('default', titlebar, (...args) => {
+    this.unpatch = cumcord.patcher.before('default', titlebar, args => {
       console.log({ args })
       if (args[0].type !== 'WEB') {
         this.onUnload()
